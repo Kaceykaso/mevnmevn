@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px 5%;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input {
+  padding: 20px;
+  display: block;
+  width: 100%;
+  margin: 0 auto 10px;
+}
+
+.submit-btn {
+  display: block;
+  padding: 20px;
+  border: 0;
+  background-color: green;
+  color: white;
+  width: 100%;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.todo-wrapper {
+  margin-top: 50px;
+}
+
+.todo-wrapper .caption {
+  margin-bottom: 15px;
+}
+
+.todo-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(207, 236, 207);
+  padding: 10px;
+}
+
+.todo-item:nth-child(even) {
+  background-color: white;
+}
+
+.todo-title {
+  margin-bottom: 7px;
+}
+
+.todo-btns button {
+  padding: 10px;
+  cursor: pointer;
+  border: 0;
+}
+
+.edit-btn {
+  background-color: green;
+  color: white;
+  margin-right: 7px;
+}
+
+.del-btn {
+  background-color: red;
+  color: white;
+}
+
+.update-form {
+  position: absolute;
+  display: none;
+}
+
+.update-form input {
+  padding: 7px;
+  border: 0;
+}
+
+.update-form.active {
+  display: block;
+}

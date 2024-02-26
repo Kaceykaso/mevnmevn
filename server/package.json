@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:server": "nodemon index.js --ignore ../client/",
+    "dev:client": "npm run dev --prefix ../client/",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "start": "set NODE_ENV=production&& node index.js --ignore ../client/",
+    "build": "npm run build --prefix ../client/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
+  },
+  "description": ""
+}
