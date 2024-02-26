@@ -10,6 +10,7 @@ import homeRouter from "./routes/homeRouter.js";
 import assetsRouter from "./routes/assetsRouter.js";
 
 const app = express();
+app.set('view engine', 'ejs');
 const publicPath = path.join(path.resolve(), "../client/public"); // public assets file path
 const distPath = path.join(path.resolve(), "../client/dist"); // production assets file path
 

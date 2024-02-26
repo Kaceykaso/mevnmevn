@@ -10,9 +10,10 @@ const __dirname = path.dirname(__filename);
 
 const environment = process.env.NODE_ENV;
 
-router.get("/*", async (_req, res) => {
+router.get("/", async (req, res) => {
   const data = {
     environment,
+    hello: "Hi there!",
     manifest: await parseManifest(),
   };
 
@@ -25,12 +26,7 @@ router.get("/*", async (_req, res) => {
 const parseManifest = async () => {
   if (environment !== "production") return {};
 
-  const manifestPath = path.join(
-    __dirname,
-    "../../client",
-    "dist",
-    "manifest.json"
-  );
+  const manifestPath = "../../client/dist/.vite/manifest.json";
   const manifestFile = await fs.readFile(manifestPath);
 
   return JSON.parse(manifestFile);

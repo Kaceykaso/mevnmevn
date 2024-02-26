@@ -55,8 +55,9 @@ export default {
   },
   methods: {
     async getTodos() {
-      const res = await axios.get("/api/todoList");
-      this.todos = res.data;
+      const res = await fetch('api/todoList');
+      const data = await res.json();
+      this.todos = data;
     },
 
     async addTodo() {
